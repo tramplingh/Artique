@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artique - Reviving Indian Folk Art</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+    <img src="logo.png" > 
+    Artique
+</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Marketplace</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">The Artforms</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Artists</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="hero-section text-white">
+    <div class="container">
+        <h1>Reviving India's Artistic Soul</h1>
+        <p class="lead my-4">A digital home for traditional folk art. Discover the timeless beauty of Warli, Pithora, and Madhubani from the artists preserving this heritage.</p>
+        <a href="#" class="btn btn-primary btn-lg">Discover the Artforms</a>
+    </div>
+</div>
+
+<div class="container my-5 py-5">
+    <h2 class="text-center section-title">Explore the Artforms</h2>
+    
+    <div class="artforms-slider">
+        <div class="slider-viewport">
+            <div class="slider-track">
+                <div class="slider-item">
+                    <div class="card art-card">
+                        <img src="worli.jpeg" class="card-img-top art-card-img" alt="Warli Painting">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Warli Painting</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="card art-card">
+                        <img src="madhubani.jpeg" class="card-img-top art-card-img" alt="Madhubani Painting">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Madhubani Painting</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="card art-card">
+                        <img src="pithora.jpeg" class="card-img-top art-card-img" alt="Pithora Painting">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Pithora Painting</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="card art-card">
+                        <img src="tanjore.jpeg" class="card-img-top art-card-img" alt="Tanjore Painting">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Tanjore Painting</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="card art-card">
+                        <img src="mughal.jpeg" class="card-img-top art-card-img" alt="Miniature Mughal Art">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Miniature Mughal Art</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <i class="bi bi-arrow-left-circle-fill slider-arrow arrow-prev"></i>
+        <i class="bi bi-arrow-right-circle-fill slider-arrow arrow-next"></i>
+    </div>
+    <div class="text-center mt-4">
+        <a href="#" class="btn btn-warning">More Artforms</a>
+    </div>
+
+    <div class="mt-5 pt-5">
+        <h2 class="text-center section-title">Featured Masterpieces</h2>
+        <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="portrait-img-container">
+                        <img src="gond.jpeg" class="d-block carousel-img" alt="Gond Art">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block"><h5>Tree of Life</h5><p>A beautiful depiction of nature in the Gond art style.</p></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="portrait-img-container">
+                        <img src="kalamkari.jpeg" class="d-block carousel-img" alt="Kalamkari Art">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block"><h5>Mythological Scenes</h5><p>Intricate Kalamkari storytelling on cotton fabric.</p></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="portrait-img-container">
+                        <img src="jaipur.jpeg" class="d-block carousel-img" alt="Phad Painting">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block"><h5>The Royal Procession</h5><p>A vibrant narrative scroll painting from Rajasthan.</p></div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+        </div>
+    </div>
+    <div class="text-center mt-3"><a href="#" class="btn btn-warning">More Featured Art</a></div>
+
+    <h2 class="text-center section-title mt-5 pt-5">Meet Our Artists</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card art-card"><img src="https://images.unsplash.com/photo-1620921269870-3d712166a02b?q=80&w=2574&auto=format&fit=crop" class="card-img-top art-card-img" alt="Indian Artist"><div class="card-body text-center"><h5 class="card-title">Ramesh Varma</h5><p class="card-text text-secondary">Master of Pithora Art</p></div></div>
+        </div>
+        <div class="col-md-4">
+            <div class="card art-card"><img src="https://images.unsplash.com/photo-1620921269800-7389a42a4170?q=80&w=2574&auto=format&fit=crop" class="card-img-top art-card-img" alt="Indian Artist"><div class="card-body text-center"><h5 class="card-title">Sita Devi</h5><p class="card-text text-secondary">Madhubani Painter</p></div></div>
+        </div>
+        <div class="col-md-4">
+            <div class="card art-card"><img src="https://images.unsplash.com/photo-1620921269699-e324a0a4c5a3?q=80&w=2574&auto=format&fit=crop" class="card-img-top art-card-img" alt="Indian Artist"><div class="card-body text-center"><h5 class="card-title">Jivya Soma</h5><p class="card-text text-secondary">Warli Artisan</p></div></div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer text-light pt-5 pb-4">
+    <div class="container text-center text-md-start">
+        <div class="row">
+            <div class="col-md-3 mx-auto mb-4">
+                <h5 class="fw-bold mb-4" style="color: var(--primary-color);">Artique</h5>
+                <p>A digital initiative to preserve, promote, and sustain India's rich heritage of traditional folk art.</p>
+            </div>
+            <div class="col-md-2 mx-auto mb-4">
+                <h5 class="text-uppercase fw-bold mb-4">Explore</h5>
+                <p><a href="#" class="text-secondary">Marketplace</a></p>
+                <p><a href="#" class="text-secondary">The Artforms</a></p>
+                <p><a href="#" class="text-secondary">Our Artists</a></p>
+            </div>
+            <div class="col-md-3 mx-auto mb-4">
+                <h5 class="text-uppercase fw-bold mb-4">Contact</h5>
+                <p><i class="bi bi-geo-alt-fill me-3"></i>Bengaluru, Karnataka, India</p>
+                <p><i class="bi bi-envelope-fill me-3"></i>support@artique.com</p>
+            </div>
+            <div class="col-md-3 mx-auto mb-4">
+                <h5 class="text-uppercase fw-bold mb-4">Follow Us</h5>
+                <div>
+                    <a href="#" class="text-secondary me-4"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-secondary me-4"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-secondary me-4"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="text-center">&copy; 2025 Artique. All Rights Reserved.</div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
