@@ -1,0 +1,133 @@
+:root {
+    --primary-color: #D4AF37; /* Gold Accent */
+    --dark-color: #1a1a1a;    /* Rich Dark Charcoal */
+    --light-text: #f8f9fa;
+    --secondary-text: #a0a0a0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--dark-color);
+    color: var(--light-text);
+}
+
+/* --- Navbar Styling (Identical to other pages) --- */
+.navbar {
+    background-color: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+}
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--primary-color) !important;
+    display: flex;
+    align-items: center;
+}
+.navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+}
+.nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 12px;
+    transition: color 0.3s ease;
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* --- Hero Section (Identical to other pages) --- */
+.hero-section {
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1596738362632-13a37752d51d?q=80&w=2574&auto=format&fit=crop') center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 60px;
+}
+.hero-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+.hero-section p {
+    font-size: 1.4rem;
+    color: var(--secondary-text);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+/* --- New Artist Card Styling --- */
+.artist-card {
+    background-color: #242424;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 2rem 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+.artist-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.artist-img-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1.5rem auto;
+}
+
+.artist-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+}
+
+.artist-card .card-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--light-text);
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+}
+
+.artist-specialty {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.btn-outline-warning {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+.btn-outline-warning:hover {
+    color: var(--dark-color);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* --- Footer Styling (Identical to other pages) --- */
+.footer { background-color: #121212; border-top: 1px solid #333; }
+.footer a:hover { color: var(--primary-color) !important; text-decoration: none !important; }
+.footer .bi { font-size: 1.5rem; transition: color 0.3s ease; }

@@ -1,0 +1,140 @@
+:root {
+    --primary-color: #D4AF37; /* Gold Accent */
+    --dark-color: #1a1a1a;    /* Rich Dark Charcoal */
+    --light-text: #f8f9fa;
+    --secondary-text: #a0a0a0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--dark-color);
+    color: var(--light-text);
+}
+
+/* --- Navbar Styling (Identical to homepage) --- */
+.navbar {
+    background-color: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--primary-color) !important;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 12px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* --- Hero Section (Identical to homepage) --- */
+.hero-section {
+    height: 70vh; /* Made slightly shorter for an inner page */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=2574&auto=format&fit=crop') center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 60px; /* Offset for fixed navbar */
+}
+
+.hero-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.hero-section p {
+    font-size: 1.4rem;
+    color: var(--secondary-text);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+/* --- New Artform Card Styling --- */
+.artform-gallery {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.artform-card {
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artform-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+}
+
+.artform-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.artform-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 2.5rem;
+}
+
+.artform-card .card-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+/* --- Yellow Button Styling (Identical to homepage) --- */
+.btn-warning {
+    background-color: var(--primary-color) !important;
+    color: var(--dark-color) !important;
+    border-color: var(--primary-color) !important;
+    padding: 10px 25px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start; /* Aligns button to the left in flex container */
+}
+
+.btn-warning:hover {
+    background-color: #b38f29 !important;
+    border-color: #b38f29 !important;
+    transform: translateY(-2px);
+}
+
+/* --- Footer Styling (Identical to homepage) --- */
+.footer { background-color: #121212; border-top: 1px solid #333; }
+.footer a:hover { color: var(--primary-color) !important; text-decoration: none !important; }
+.footer .bi { font-size: 1.5rem; transition: color 0.3s ease; }
