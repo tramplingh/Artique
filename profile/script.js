@@ -7,7 +7,6 @@ const firebaseConfig = {
   messagingSenderId: "956681696244",
   appId: "1:956681696244:web:dea033faddb4aa31e0ffa1"
 };
-
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
@@ -27,19 +26,19 @@ const userDashboard = document.getElementById('user-dashboard');
 const userEmailDisplay = document.getElementById('user-email');
 const userRoleDisplay = document.getElementById('user-role');
 
-let userRole = 'enthusiast'; // Default role
+let selectedRole = 'enthusiast'; // Default role
 
 // --- EVENT LISTENERS ---
 
 // Role selection
 enthusiastBtn.addEventListener('click', () => {
-    userRole = 'enthusiast';
+    selectedRole = 'enthusiast';
     enthusiastBtn.classList.add('active');
     artistBtn.classList.remove('active');
 });
 
 artistBtn.addEventListener('click', () => {
-    userRole = 'artist';
+    selectedRole = 'artist';
     artistBtn.classList.add('active');
     enthusiastBtn.classList.remove('active');
 });
@@ -51,11 +50,9 @@ signupBtn.addEventListener('click', () => {
 
     auth.createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
-            // Signed in 
-            const user = userCredential.user;
-            console.log('User created:', user);
-            // In a real app, you would save the userRole to a database here
-            console.log('User role:', userRole); 
+            // In a real app, save the role to a database.
+            // For the hackathon, we'll save it to localStorage.
+            localStorage.setItem('userRole', selectedRole);
             errorMessage.textContent = '';
         })
         .catch((error) => {
@@ -70,9 +67,8 @@ signinBtn.addEventListener('click', () => {
 
     auth.signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
-            // Signed in
-            const user = userCredential.user;
-            console.log('User signed in:', user);
+            // On sign-in, also save the selected role to localStorage
+            localStorage.setItem('userRole', selectedRole);
             errorMessage.textContent = '';
         })
         .catch((error) => {
@@ -83,6 +79,7 @@ signinBtn.addEventListener('click', () => {
 // Sign out button
 signoutBtn.addEventListener('click', () => {
     auth.signOut().then(() => {
+        localStorage.removeItem('userRole'); // Clear the role on sign out
         console.log('User signed out');
     });
 });
@@ -92,14 +89,19 @@ signoutBtn.addEventListener('click', () => {
 auth.onAuthStateChanged((user) => {
     if (user) {
         // User is signed in
-        authContainer.classList.add('d-none');
-        userDashboard.classList.remove('d-none');
-        userEmailDisplay.textContent = user.email;
-        
-        // NOTE: This is a placeholder for role display. In a real app,
-        // you would fetch the user's role from a database like Firestore.
-        // For this hackathon, we'll just display the last selected role.
-        userRoleDisplay.textContent = userRole;
+        const userRole = localStorage.getItem('userRole');
+
+        // ** REDIRECTION LOGIC **
+        if (userRole === 'artist') {
+            // If the user is an artist, redirect to the artist dashboard
+            window.location.href = '../dashboard/artist-dashboard.html';
+        } else {
+            // Otherwise, show the enthusiast dashboard here
+            authContainer.classList.add('d-none');
+            userDashboard.classList.remove('d-none');
+            userEmailDisplay.textContent = user.email;
+            userRoleDisplay.textContent = userRole || 'enthusiast';
+        }
 
     } else {
         // User is signed out

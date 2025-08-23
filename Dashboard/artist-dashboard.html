@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Dashboard - Artique</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="../home.html">
+             <img src="../images/logo.png" alt="Artique Logo">
+             Artique
+        </a>
+         <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a id="signout-btn" class="nav-link" href="#">Sign Out</a></li>
+            <li class="nav-item"><a class="nav-link" href="../profile/profile.html" aria-label="Profile"><i class="bi bi-person-circle"></i></a></li>
+         </ul>
+    </div>
+</nav>
+
+<div class="dashboard-container">
+    <div class="container">
+        <h1 class="section-title">Artist Dashboard</h1>
+        <p class="text-secondary mb-5">Welcome, <span id="artist-email">artist@email.com</span>. List your new artwork for sale below.</p>
+        
+        <div class="form-wrapper">
+            <h3 class="mb-4">List a New Artwork</h3>
+            
+            <div class="mb-3">
+                <label for="art-title" class="form-label">Artwork Title</label>
+                <input type="text" class="form-control" id="art-title" placeholder="e.g., The Sacred Cow">
+            </div>
+            
+            <div class="mb-3">
+                <label for="art-description" class="form-label">Description</label>
+                <textarea class="form-control" id="art-description" rows="3" placeholder="Describe your artwork..."></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="art-image" class="form-label">Upload Image</label>
+                <input class="form-control" type="file" id="art-image">
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                     <label for="art-price" class="form-label">Price</label>
+                     <input type="text" class="form-control" id="art-price" placeholder="e.g., ₹ 25,000 or 0.5 ETH">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Artwork Type</label>
+                    <div class="pt-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="art-type" id="type-physical" value="physical" checked>
+                            <label class="form-check-label" for="type-physical">Physical</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="art-type" id="type-nft" value="nft">
+                            <label class="form-check-label" for="type-nft">Digital (NFT)</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button id="submit-art-btn" class="btn btn-warning mt-3">Submit for Review</button>
+            <p id="success-message" class="text-success mt-3"></p>
+        </div>
+    </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
