@@ -160,3 +160,52 @@ body {
     background-color: #8A2BE2; /* A distinct purple for NFTs */
     color: var(--light-text);
 }
+/* --- Art Detail Page Specific Styles --- */
+.art-detail-img-container {
+    padding: 15px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+}
+
+.art-detail-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--light-text);
+}
+
+.art-detail-artist {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.art-detail-price {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.art-detail-heading {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: var(--light-text);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.art-detail-description {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+.art-detail-list li {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.art-detail-list li .bi {
+    color: var(--primary-color);
+}
