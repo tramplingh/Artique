@@ -1,4 +1,4 @@
-// **IMPORTANT**: PASTE YOUR FIREBASE CONFIGURATION HERE
+
 const firebaseConfig = {
   apiKey: "AIzaSyBtvD88WjSaOf_FMhsUZvUKtdoZkK2DIoU",
   authDomain: "artique-afa63.firebaseapp.com",
