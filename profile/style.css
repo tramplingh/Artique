@@ -63,6 +63,14 @@ body {
     border: 1px solid #333;
 }
 
+.dashboard-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 420px; 
+}
+
+
 .role-selection {
     display: flex;
     border: 1px solid #444;
