@@ -44,7 +44,7 @@ body {
 /* --- Hero Section (Identical to other pages) --- */
 .hero-section {
     height: 70vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1596738362632-13a37752d51d?q=80&w=2574&auto=format&fit=crop') center center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(114, 89, 8, 0.7)), url('https://images.unsplash.com/photo-1596738362632-13a37752d51d?q=80&w=2574&auto=format&fit=crop') center center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
