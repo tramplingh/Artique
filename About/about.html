@@ -15,25 +15,36 @@
     <link rel="stylesheet" href="../style.css"> 
 
     <style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=2574&auto=format&fit=crop') center center/cover no-repeat;
+            background-attachment: fixed;
+        }
+
         .about-hero-section {
-            height: 50vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1629165147817-269e8b91a742?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center center/cover no-repeat;
+            height: 60vh;
+            background: transparent;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding-top: 56px; /* To account for the fixed navbar */
+        }
+
+        /* NEW: Rule for the translucent background */
+        .hero-text-wrapper {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 2rem 3rem;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        .about-hero-section h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
         }
 
         .about-content {
-            padding: 5rem 0;
+            padding: 3rem 0 5rem;
             line-height: 1.8;
-        }
-
-        .about-content h2 {
-            font-family: 'Playfair Display', serif;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
         }
 
         .about-content p {
@@ -72,8 +83,8 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="../marketplace/marketplace.html">Marketplace</a></li>
-                <li class="nav-item"><a class="nav-link" href="../artform/artform.html">Artforms</a></li>
-                <li class="nav-item"><a class="nav-link" href="../Artists/artist.html">Artists</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">The Artforms</a></li>
+                <li class="nav-item"><a class="nav-link" href="../artists/artists.html">Our Artists</a></li>
                 <li class="nav-item"><a class="nav-link active" href="#">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="../profile/profile.html" aria-label="Profile"><i class="bi bi-person-circle"></i></a></li>
             </ul>
@@ -83,8 +94,10 @@
 
 <div class="about-hero-section text-white">
     <div class="container">
-        <h1 class="display-3 fw-bold">Our Story</h1>
-        <p class="lead">Bridging generations and preserving a legacy of color and tradition.</p>
+        <div class="hero-text-wrapper">
+            <h1 class="display-3 fw-bold">Our Story</h1>
+            <p class="lead">Bridging generations and preserving a legacy of color and tradition.</p>
+        </div>
     </div>
 </div>
 
@@ -118,8 +131,8 @@
             <div class="col-md-2 mx-auto mb-4">
                 <h5 class="text-uppercase fw-bold mb-4">Explore</h5>
                 <p><a href="../marketplace/marketplace.html" class="text-secondary">Marketplace</a></p>
-                <p><a href="../artform/artform.html" class="text-secondary">Artforms</a></p>
-                <p><a href="../Artists/artist.html" class="text-secondary">Artists</a></p>
+                <p><a href="#" class="text-secondary">Artforms</a></p>
+                <p><a href="../artists/artists.html" class="text-secondary">Artists</a></p>
             </div>
             <div class="col-md-3 mx-auto mb-4">
                 <h5 class="text-uppercase fw-bold mb-4">Contact</h5>
