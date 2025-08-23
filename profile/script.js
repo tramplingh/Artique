@@ -1,11 +1,11 @@
 // **IMPORTANT**: PASTE YOUR FIREBASE CONFIGURATION HERE
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyBtvD88WjSaOf_FMhsUZvUKtdoZkK2DIoU",
+  authDomain: "artique-afa63.firebaseapp.com",
+  projectId: "artique-afa63",
+  storageBucket: "artique-afa63.firebasestorage.app",
+  messagingSenderId: "956681696244",
+  appId: "1:956681696244:web:dea033faddb4aa31e0ffa1"
 };
 
 // Initialize Firebase
