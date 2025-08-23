@@ -9,6 +9,8 @@ body {
     font-family: 'Lato', sans-serif;
     background-color: var(--dark-color);
     color: var(--light-text);
+    padding-top: 150px; /* Add this line to create space for the navbar */
+    
 }
 
 /* --- Reusable Components from Homepage --- */
@@ -208,4 +210,81 @@ body {
 
 .art-detail-list li .bi {
     color: var(--primary-color);
+}
+/* --- Search Bar Styles --- */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#searchInput {
+    background-color: #333;
+    border: 1px solid #555;
+    color: var(--light-text);
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+}
+
+.search-container .btn {
+    padding: 10px 20px;
+}
+
+/* --- Search Bar Styles --- */
+.search-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#searchInput {
+    background-color: #333;
+    border: 1px solid #555;
+    color: var(--light-text);
+    padding: 10px 15px;
+    border-right: none; /* Removes the border between the input and button */
+    border-radius: 5px 0 0 5px; /* Adds a rounded corner only to the left side */
+    transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+}
+
+.search-container .btn {
+    border-radius: 0 5px 5px 0; /* Adds a rounded corner only to the right side */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .search-container .input-group {
+        flex-direction: column;
+    }
+
+    #searchInput {
+        border-radius: 5px 5px 0 0; /* Adjusts corners for stacked layout */
+        border-right: 1px solid #555;
+    }
+
+    .search-container .btn {
+        width: 100%;
+        border-radius: 0 0 5px 5px; /* Adjusts corners for stacked layout */
+    }
+}
+
+/* Add margin to push content down from the fixed navbar */
+.hero-section {
+    padding-top: 500px; /* Adjust this value as needed */
+    /* ... existing styles for .hero-section ... */
 }
