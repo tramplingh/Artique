@@ -27,7 +27,9 @@ const authContainer = document.getElementById('auth-container');
 const userDashboard = document.getElementById('user-dashboard');
 const userEmailDisplay = document.getElementById('user-email');
 const userRoleDisplay = document.getElementById('user-role');
-const artistSection = document.getElementById('artist-section'); // New artist section
+const artistSection = document.getElementById('artist-section'); 
+const enthusiastSection = document.getElementById('enthusiast-section');
+const publishedWorksSection = document.getElementById('published-works-section'); // NEW: Published works section
 
 let selectedRole = 'enthusiast';
 
@@ -83,31 +85,38 @@ auth.onAuthStateChanged(user => {
                 const userData = doc.data();
                 const userRole = userData.role;
 
-                // Show the main dashboard for everyone who is logged in
                 authContainer.classList.add('d-none');
                 userDashboard.classList.remove('d-none');
                 userEmailDisplay.textContent = user.email;
                 userRoleDisplay.textContent = userRole;
 
-                // ** NEW LOGIC **: Show artist section only if role is 'artist'
+                // ** UPDATED LOGIC **: Show sections based on user role
                 if (userRole === 'artist') {
                     artistSection.classList.remove('d-none');
+                    publishedWorksSection.classList.remove('d-none'); // Show published works
+                    enthusiastSection.classList.add('d-none');
+                } else if (userRole === 'enthusiast') {
+                    enthusiastSection.classList.remove('d-none');
+                    artistSection.classList.add('d-none');
+                    publishedWorksSection.classList.add('d-none'); // Hide published works
                 } else {
                     artistSection.classList.add('d-none');
+                    enthusiastSection.classList.add('d-none');
+                    publishedWorksSection.classList.add('d-none');
                 }
+
             } else {
                 errorMessage.textContent = "Your user profile could not be found.";
                 auth.signOut();
             }
         });
     } else {
-        // User is signed out
         authContainer.classList.remove('d-none');
         userDashboard.classList.add('d-none');
     }
 });
 
-// --- ARTIST FORM LOGIC (Moved from old dashboard script) ---
+// --- ARTIST FORM LOGIC ---
 const submitArtBtn = document.getElementById('submit-art-btn');
 const successMessage = document.getElementById('success-message');
 

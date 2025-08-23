@@ -61,35 +61,69 @@
                 <div id="user-dashboard" class="d-none">
                     <h1 class="section-title text-center">Welcome Back</h1>
                     <div class="dashboard-card text-center">
+                        <img src="https://brunswickbowling.nyc3.cdn.digitaloceanspaces.com/production/transforms/bowlerproducts/Products/Balls/Polyester/477124/Viz-A-Ball_Paint_Splatter_2023_Front_1600x1600_18694ddcf445590f9b69434f3e02c496.png" alt="Profile Picture" class="profile-picture mb-3">
+                        
                         <p class="text-secondary">You are logged in as:</p>
                         <p id="user-email" class="user-email-display"></p>
                         <p id="user-role" class="user-role-display"></p>
                         <button id="signout-btn" class="btn btn-outline-warning mt-3">Sign Out</button>
                     </div>
 
+                    <div id="enthusiast-section" class="d-none mt-5">
+                        <h3 class="section-title text-center mb-4">Arts I Own</h3>
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="art-card">
+                                    <img src="https://www.madhubani-art.in/wp-content/uploads/2025/05/1.png" alt="Madhubani Painting">
+                                    <p class="art-card-title">Madhubani Painting</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="art-card">
+                                    <img src="https://www.artzolo.com/cdn/shop/files/warli-art-19-artzolo-com.jpg?v=1715694650&width=600" alt="Warli Art">
+                                    <p class="art-card-title">Warli Art</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="art-card">
+                                    <img src="https://rainbowsandhues.com/wp-content/uploads/2024/08/Patta_Chitra_01.jpg" alt="Pattachitra Art">
+                                    <p class="art-card-title">Pattachitra Art</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="art-card">
+                                    <img src="https://laasyaart.com/wp-content/uploads/2022/06/Kalamkari-blog-header.jpg" alt="Kalamkari Art">
+                                    <p class="art-card-title">Kalamkari Art</p>
+                                </div>
+                            </div>
+                             <div class="col-lg-4 col-md-6">
+                                <div class="art-card">
+                                    <img src="https://c9admin.cottage9.com/uploads/4315/themes-and-motifs-in-gond-painting.jpg" alt="Gond Art">
+                                    <p class="art-card-title">Gond Art</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div id="artist-section" class="d-none mt-5">
                          <div class="form-wrapper">
                             <h3 class="mb-4 section-title">List a New Artwork</h3>
-                            
                             <div class="mb-3 text-start">
                                 <label for="art-title" class="form-label">Artwork Title</label>
                                 <input type="text" class="form-control" id="art-title" placeholder="e.g., The Sacred Cow">
                             </div>
-                            
                             <div class="mb-3 text-start">
                                 <label for="art-description" class="form-label">Description</label>
                                 <textarea class="form-control" id="art-description" rows="3" placeholder="Describe your artwork..."></textarea>
                             </div>
-
                             <div class="mb-3 text-start">
                                 <label for="art-image" class="form-label">Upload Image</label>
                                 <input class="form-control" type="file" id="art-image">
                             </div>
-
                             <div class="row text-start">
                                 <div class="col-md-6 mb-3">
-                                     <label for="art-price" class="form-label">Price</label>
-                                     <input type="text" class="form-control" id="art-price" placeholder="e.g., ₹ 25,000 or 0.5 ETH">
+                                      <label for="art-price" class="form-label">Price</label>
+                                      <input type="text" class="form-control" id="art-price" placeholder="e.g., ₹ 25,000 or 0.5 ETH">
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label">Artwork Type</label>
@@ -105,11 +139,54 @@
                                     </div>
                                 </div>
                             </div>
-
                             <button id="submit-art-btn" class="btn btn-warning mt-3">Submit for Review</button>
                             <p id="success-message" class="text-success mt-3"></p>
                         </div>
                     </div>
+                    
+                    <!-- NEW: Published Works Section for Artists -->
+                    <div id="published-works-section" class="d-none mt-5">
+                        <h3 class="section-title text-center mb-4">Works I've Published</h3>
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="art-card">
+                                    <img src="https://www.myangadi.com/image/cache/catalog/jun24-stock/pmatp24m06-ss6-355-peacock-tanjore-paintings-550x550h.JPG" alt="Tanjore Painting">
+                                    <p class="art-card-title">Tanjore Painting</p>
+                                    <p class="art-card-price">Current Price: ₹ 45,000</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="art-card">
+                                    <img src="https://cdn.shopify.com/s/files/1/0849/4704/files/Pabuji_Ki_Vivaah.jpg?v=1529321262" alt="Phad Painting">
+                                    <p class="art-card-title">Phad Painting</p>
+                                    <p class="art-card-price sold">Sold for ₹ 30,000</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="art-card">
+                                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgY2vy-1QwVvnPBso-urp5NZRre1bpHyt2PUgpyHUwMNaTLZby48-3ut2NZFckTaLLf8dzCIOda8yGArny4yqUwMlg_8U-rdQbNiBNDmODXAAurHWZVeX-kXN03hfTOBd-W26PFtv6MV-o/s640/ithappensinindia.jpg" alt="Kalamkari Art">
+                                    <p class="art-card-title">Kalamkari Art</p>
+                                    <p class="art-card-price">Current Price: ₹ 18,000</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="art-card">
+                                    <img src="https://cdn.shopify.com/s/files/1/0621/4179/2497/files/fish_Madhubani_painting-5.webp?v=1699911094" alt="Madhubani Art">
+                                    <p class="art-card-title">Madhubani Art</p>
+                                    <p class="art-card-price sold">Sold for ₹ 22,500</p>
+                                </div>
+                            </div>
+                             <div class="col-lg-4 col-md-6">
+                                <div class="art-card">
+                                    <img src="https://www.artisera.com/cdn/shop/collections/Gond_Art_-_Banner.jpg?v=1733808738" alt="Gond Art">
+                                    <p class="art-card-title">Gond Art</p>
+                                    <p class="art-card-price">Current Price: ₹ 15,000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Published Works Section -->
+
                 </div>
 
             </div>
