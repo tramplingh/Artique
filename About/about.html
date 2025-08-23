@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Artique</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css"> 
+
+    <style>
+        .about-hero-section {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1629165147817-269e8b91a742?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 56px; /* To account for the fixed navbar */
+        }
+
+        .about-content {
+            padding: 5rem 0;
+            line-height: 1.8;
+        }
+
+        .about-content h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            color: var(--secondary-text);
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .mission-vision {
+            background-color: #2a2a2a;
+            padding: 3rem;
+            border-radius: 10px;
+            margin-top: 3rem;
+        }
+
+        .mission-vision h4 {
+            color: var(--primary-color);
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="../index.html">
+            <img src="../images/logo.png" alt="Artique Logo"> 
+            Artique
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../marketplace/marketplace.html">Marketplace</a></li>
+                <li class="nav-item"><a class="nav-link" href="../artform/artform.html">Artforms</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Artists/artist.html">Artists</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="../profile/profile.html" aria-label="Profile"><i class="bi bi-person-circle"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="about-hero-section text-white">
+    <div class="container">
+        <h1 class="display-3 fw-bold">Our Story</h1>
+        <p class="lead">Bridging generations and preserving a legacy of color and tradition.</p>
+    </div>
+</div>
+
+<div class="container text-center about-content">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <p>Artique was born from a deep reverence for India's traditional folk art forms. In a world of mass production, we believe there is an unparalleled beauty in the unique, handcrafted creations passed down through generations. Our platform serves as a digital sanctuary for these ancient art styles, connecting the skilled artisans who pour their soul into each piece with a global audience of enthusiasts and collectors.</p>
+            <p>We are more than just a marketplace; we are a movement dedicated to **cultural preservation and economic empowerment**. We provide a sustainable livelihood for artists, ensuring that their intricate skills and traditional knowledge do not fade into history. By purchasing a piece from Artique, you are not just acquiring art—you are becoming a patron of a living heritage, helping to keep these vibrant traditions alive.</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mission-vision">
+        <div class="col-md-6 mb-4">
+            <h4>Our Mission</h4>
+            <p>To preserve, promote, and sustain India's rich heritage of traditional folk art by creating a fair and accessible digital platform for its artists.</p>
+        </div>
+        <div class="col-md-6">
+            <h4>Our Vision</h4>
+            <p>To be the world's leading destination for authentic Indian folk art, fostering a global appreciation for its cultural significance and timeless beauty.</p>
+        </div>
+    </div>
+</div>
+
+<footer class="footer text-light pt-5 pb-4">
+    <div class="container text-center text-md-start">
+        <div class="row">
+            <div class="col-md-3 mx-auto mb-4">
+                <h5 class="fw-bold mb-4" style="color: var(--primary-color);">Artique</h5>
+                <p>A digital initiative to preserve, promote, and sustain India's rich heritage of traditional folk art.</p>
+            </div>
+            <div class="col-md-2 mx-auto mb-4">
+                <h5 class="text-uppercase fw-bold mb-4">Explore</h5>
+                <p><a href="../marketplace/marketplace.html" class="text-secondary">Marketplace</a></p>
+                <p><a href="../artform/artform.html" class="text-secondary">Artforms</a></p>
+                <p><a href="../Artists/artist.html" class="text-secondary">Artists</a></p>
+            </div>
+            <div class="col-md-3 mx-auto mb-4">
+                <h5 class="text-uppercase fw-bold mb-4">Contact</h5>
+                <p><i class="bi bi-geo-alt-fill me-3"></i>Bengaluru, Karnataka, India</p>
+                <p><i class="bi bi-envelope-fill me-3"></i>support@artique.com</p>
+            </div>
+            <div class="col-md-3 mx-auto mb-4">
+                <h5 class="text-uppercase fw-bold mb-4">Follow Us</h5>
+                <div>
+                    <a href="#" class="text-secondary me-4"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-secondary me-4"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-secondary me-4"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="text-center">&copy; 2025 Artique. All Rights Reserved.</div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
